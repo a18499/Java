@@ -8,7 +8,8 @@ public class Algorithm {
     public ArrayList<Integer> bubbleSort(ArrayList<Integer> numbers){
 
         int temp;
-        for(int i=0;i<numbers.size()-1;i++){
+        System.out.println("Num Size: "+numbers.size());
+        for(int i=1;i<=numbers.size()-1;i++){
             for(int j=0;j<numbers.size()-i;j++){
                 if(numbers.get(j)<numbers.get(j+1)){
                     temp = numbers.get(j);
@@ -25,9 +26,10 @@ public class Algorithm {
         ArrayList<Integer> testArray = new ArrayList<>();
         ArrayList<Integer> resulttestArray ;
         Random r = new Random();
-        for(int i =0;i<10;i++){
+        for(int i=0;i<10;i++){
             testArray.add(r.nextInt(1000));
         }
+        System.out.println("Begin to Sort");
         resulttestArray = algorithm.bubbleSort(testArray);
         for(int each : resulttestArray){
             System.out.println(each);
